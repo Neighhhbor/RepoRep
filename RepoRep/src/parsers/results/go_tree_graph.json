@@ -1,0 +1,1265 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "type": "source_file",
+            "text": "package main\n\nimport \"fmt\"\n\nfunc multiply(a int, b int) int {\n    return a * b\n}\n\nfunc main() {\n    result := multiply(5, 3)\n    fmt.Println(\"Multiplication:\", result)\n}\n",
+            "start_byte": 0,
+            "end_byte": 170,
+            "start_point": [
+                0,
+                0
+            ],
+            "end_point": [
+                12,
+                0
+            ],
+            "is_named": true,
+            "parent": null,
+            "child_count": 4
+        },
+        {
+            "id": 1,
+            "type": "package_clause",
+            "text": "package main",
+            "start_byte": 0,
+            "end_byte": 12,
+            "start_point": [
+                0,
+                0
+            ],
+            "end_point": [
+                0,
+                12
+            ],
+            "is_named": true,
+            "parent": 0,
+            "child_count": 2
+        },
+        {
+            "id": 2,
+            "type": "package",
+            "text": "package",
+            "start_byte": 0,
+            "end_byte": 7,
+            "start_point": [
+                0,
+                0
+            ],
+            "end_point": [
+                0,
+                7
+            ],
+            "is_named": false,
+            "parent": 1,
+            "child_count": 0
+        },
+        {
+            "id": 3,
+            "type": "package_identifier",
+            "text": "main",
+            "start_byte": 8,
+            "end_byte": 12,
+            "start_point": [
+                0,
+                8
+            ],
+            "end_point": [
+                0,
+                12
+            ],
+            "is_named": true,
+            "parent": 1,
+            "child_count": 0
+        },
+        {
+            "id": 4,
+            "type": "import_declaration",
+            "text": "import \"fmt\"",
+            "start_byte": 14,
+            "end_byte": 26,
+            "start_point": [
+                2,
+                0
+            ],
+            "end_point": [
+                2,
+                12
+            ],
+            "is_named": true,
+            "parent": 0,
+            "child_count": 2
+        },
+        {
+            "id": 5,
+            "type": "import",
+            "text": "import",
+            "start_byte": 14,
+            "end_byte": 20,
+            "start_point": [
+                2,
+                0
+            ],
+            "end_point": [
+                2,
+                6
+            ],
+            "is_named": false,
+            "parent": 4,
+            "child_count": 0
+        },
+        {
+            "id": 6,
+            "type": "import_spec",
+            "text": "\"fmt\"",
+            "start_byte": 21,
+            "end_byte": 26,
+            "start_point": [
+                2,
+                7
+            ],
+            "end_point": [
+                2,
+                12
+            ],
+            "is_named": true,
+            "parent": 4,
+            "child_count": 1
+        },
+        {
+            "id": 7,
+            "type": "interpreted_string_literal",
+            "text": "\"fmt\"",
+            "start_byte": 21,
+            "end_byte": 26,
+            "start_point": [
+                2,
+                7
+            ],
+            "end_point": [
+                2,
+                12
+            ],
+            "is_named": true,
+            "parent": 6,
+            "child_count": 2
+        },
+        {
+            "id": 8,
+            "type": "\"",
+            "text": "\"",
+            "start_byte": 21,
+            "end_byte": 22,
+            "start_point": [
+                2,
+                7
+            ],
+            "end_point": [
+                2,
+                8
+            ],
+            "is_named": false,
+            "parent": 7,
+            "child_count": 0
+        },
+        {
+            "id": 9,
+            "type": "\"",
+            "text": "\"",
+            "start_byte": 25,
+            "end_byte": 26,
+            "start_point": [
+                2,
+                11
+            ],
+            "end_point": [
+                2,
+                12
+            ],
+            "is_named": false,
+            "parent": 7,
+            "child_count": 0
+        },
+        {
+            "id": 10,
+            "type": "function_declaration",
+            "text": "func multiply(a int, b int) int {\n    return a * b\n}",
+            "start_byte": 28,
+            "end_byte": 80,
+            "start_point": [
+                4,
+                0
+            ],
+            "end_point": [
+                6,
+                1
+            ],
+            "is_named": true,
+            "parent": 0,
+            "child_count": 5
+        },
+        {
+            "id": 11,
+            "type": "func",
+            "text": "func",
+            "start_byte": 28,
+            "end_byte": 32,
+            "start_point": [
+                4,
+                0
+            ],
+            "end_point": [
+                4,
+                4
+            ],
+            "is_named": false,
+            "parent": 10,
+            "child_count": 0
+        },
+        {
+            "id": 12,
+            "type": "identifier",
+            "text": "multiply",
+            "start_byte": 33,
+            "end_byte": 41,
+            "start_point": [
+                4,
+                5
+            ],
+            "end_point": [
+                4,
+                13
+            ],
+            "is_named": true,
+            "parent": 10,
+            "child_count": 0
+        },
+        {
+            "id": 13,
+            "type": "parameter_list",
+            "text": "(a int, b int)",
+            "start_byte": 41,
+            "end_byte": 55,
+            "start_point": [
+                4,
+                13
+            ],
+            "end_point": [
+                4,
+                27
+            ],
+            "is_named": true,
+            "parent": 10,
+            "child_count": 5
+        },
+        {
+            "id": 14,
+            "type": "(",
+            "text": "(",
+            "start_byte": 41,
+            "end_byte": 42,
+            "start_point": [
+                4,
+                13
+            ],
+            "end_point": [
+                4,
+                14
+            ],
+            "is_named": false,
+            "parent": 13,
+            "child_count": 0
+        },
+        {
+            "id": 15,
+            "type": "parameter_declaration",
+            "text": "a int",
+            "start_byte": 42,
+            "end_byte": 47,
+            "start_point": [
+                4,
+                14
+            ],
+            "end_point": [
+                4,
+                19
+            ],
+            "is_named": true,
+            "parent": 13,
+            "child_count": 2
+        },
+        {
+            "id": 16,
+            "type": "identifier",
+            "text": "a",
+            "start_byte": 42,
+            "end_byte": 43,
+            "start_point": [
+                4,
+                14
+            ],
+            "end_point": [
+                4,
+                15
+            ],
+            "is_named": true,
+            "parent": 15,
+            "child_count": 0
+        },
+        {
+            "id": 17,
+            "type": "type_identifier",
+            "text": "int",
+            "start_byte": 44,
+            "end_byte": 47,
+            "start_point": [
+                4,
+                16
+            ],
+            "end_point": [
+                4,
+                19
+            ],
+            "is_named": true,
+            "parent": 15,
+            "child_count": 0
+        },
+        {
+            "id": 18,
+            "type": ",",
+            "text": ",",
+            "start_byte": 47,
+            "end_byte": 48,
+            "start_point": [
+                4,
+                19
+            ],
+            "end_point": [
+                4,
+                20
+            ],
+            "is_named": false,
+            "parent": 13,
+            "child_count": 0
+        },
+        {
+            "id": 19,
+            "type": "parameter_declaration",
+            "text": "b int",
+            "start_byte": 49,
+            "end_byte": 54,
+            "start_point": [
+                4,
+                21
+            ],
+            "end_point": [
+                4,
+                26
+            ],
+            "is_named": true,
+            "parent": 13,
+            "child_count": 2
+        },
+        {
+            "id": 20,
+            "type": "identifier",
+            "text": "b",
+            "start_byte": 49,
+            "end_byte": 50,
+            "start_point": [
+                4,
+                21
+            ],
+            "end_point": [
+                4,
+                22
+            ],
+            "is_named": true,
+            "parent": 19,
+            "child_count": 0
+        },
+        {
+            "id": 21,
+            "type": "type_identifier",
+            "text": "int",
+            "start_byte": 51,
+            "end_byte": 54,
+            "start_point": [
+                4,
+                23
+            ],
+            "end_point": [
+                4,
+                26
+            ],
+            "is_named": true,
+            "parent": 19,
+            "child_count": 0
+        },
+        {
+            "id": 22,
+            "type": ")",
+            "text": ")",
+            "start_byte": 54,
+            "end_byte": 55,
+            "start_point": [
+                4,
+                26
+            ],
+            "end_point": [
+                4,
+                27
+            ],
+            "is_named": false,
+            "parent": 13,
+            "child_count": 0
+        },
+        {
+            "id": 23,
+            "type": "type_identifier",
+            "text": "int",
+            "start_byte": 56,
+            "end_byte": 59,
+            "start_point": [
+                4,
+                28
+            ],
+            "end_point": [
+                4,
+                31
+            ],
+            "is_named": true,
+            "parent": 10,
+            "child_count": 0
+        },
+        {
+            "id": 24,
+            "type": "block",
+            "text": "{\n    return a * b\n}",
+            "start_byte": 60,
+            "end_byte": 80,
+            "start_point": [
+                4,
+                32
+            ],
+            "end_point": [
+                6,
+                1
+            ],
+            "is_named": true,
+            "parent": 10,
+            "child_count": 3
+        },
+        {
+            "id": 25,
+            "type": "{",
+            "text": "{",
+            "start_byte": 60,
+            "end_byte": 61,
+            "start_point": [
+                4,
+                32
+            ],
+            "end_point": [
+                4,
+                33
+            ],
+            "is_named": false,
+            "parent": 24,
+            "child_count": 0
+        },
+        {
+            "id": 26,
+            "type": "return_statement",
+            "text": "return a * b",
+            "start_byte": 66,
+            "end_byte": 78,
+            "start_point": [
+                5,
+                4
+            ],
+            "end_point": [
+                5,
+                16
+            ],
+            "is_named": true,
+            "parent": 24,
+            "child_count": 2
+        },
+        {
+            "id": 27,
+            "type": "return",
+            "text": "return",
+            "start_byte": 66,
+            "end_byte": 72,
+            "start_point": [
+                5,
+                4
+            ],
+            "end_point": [
+                5,
+                10
+            ],
+            "is_named": false,
+            "parent": 26,
+            "child_count": 0
+        },
+        {
+            "id": 28,
+            "type": "expression_list",
+            "text": "a * b",
+            "start_byte": 73,
+            "end_byte": 78,
+            "start_point": [
+                5,
+                11
+            ],
+            "end_point": [
+                5,
+                16
+            ],
+            "is_named": true,
+            "parent": 26,
+            "child_count": 1
+        },
+        {
+            "id": 29,
+            "type": "binary_expression",
+            "text": "a * b",
+            "start_byte": 73,
+            "end_byte": 78,
+            "start_point": [
+                5,
+                11
+            ],
+            "end_point": [
+                5,
+                16
+            ],
+            "is_named": true,
+            "parent": 28,
+            "child_count": 3
+        },
+        {
+            "id": 30,
+            "type": "identifier",
+            "text": "a",
+            "start_byte": 73,
+            "end_byte": 74,
+            "start_point": [
+                5,
+                11
+            ],
+            "end_point": [
+                5,
+                12
+            ],
+            "is_named": true,
+            "parent": 29,
+            "child_count": 0
+        },
+        {
+            "id": 31,
+            "type": "*",
+            "text": "*",
+            "start_byte": 75,
+            "end_byte": 76,
+            "start_point": [
+                5,
+                13
+            ],
+            "end_point": [
+                5,
+                14
+            ],
+            "is_named": false,
+            "parent": 29,
+            "child_count": 0
+        },
+        {
+            "id": 32,
+            "type": "identifier",
+            "text": "b",
+            "start_byte": 77,
+            "end_byte": 78,
+            "start_point": [
+                5,
+                15
+            ],
+            "end_point": [
+                5,
+                16
+            ],
+            "is_named": true,
+            "parent": 29,
+            "child_count": 0
+        },
+        {
+            "id": 33,
+            "type": "}",
+            "text": "}",
+            "start_byte": 79,
+            "end_byte": 80,
+            "start_point": [
+                6,
+                0
+            ],
+            "end_point": [
+                6,
+                1
+            ],
+            "is_named": false,
+            "parent": 24,
+            "child_count": 0
+        },
+        {
+            "id": 34,
+            "type": "function_declaration",
+            "text": "func main() {\n    result := multiply(5, 3)\n    fmt.Println(\"Multiplication:\", result)\n}",
+            "start_byte": 82,
+            "end_byte": 169,
+            "start_point": [
+                8,
+                0
+            ],
+            "end_point": [
+                11,
+                1
+            ],
+            "is_named": true,
+            "parent": 0,
+            "child_count": 4
+        },
+        {
+            "id": 35,
+            "type": "func",
+            "text": "func",
+            "start_byte": 82,
+            "end_byte": 86,
+            "start_point": [
+                8,
+                0
+            ],
+            "end_point": [
+                8,
+                4
+            ],
+            "is_named": false,
+            "parent": 34,
+            "child_count": 0
+        },
+        {
+            "id": 36,
+            "type": "identifier",
+            "text": "main",
+            "start_byte": 87,
+            "end_byte": 91,
+            "start_point": [
+                8,
+                5
+            ],
+            "end_point": [
+                8,
+                9
+            ],
+            "is_named": true,
+            "parent": 34,
+            "child_count": 0
+        },
+        {
+            "id": 37,
+            "type": "parameter_list",
+            "text": "()",
+            "start_byte": 91,
+            "end_byte": 93,
+            "start_point": [
+                8,
+                9
+            ],
+            "end_point": [
+                8,
+                11
+            ],
+            "is_named": true,
+            "parent": 34,
+            "child_count": 2
+        },
+        {
+            "id": 38,
+            "type": "(",
+            "text": "(",
+            "start_byte": 91,
+            "end_byte": 92,
+            "start_point": [
+                8,
+                9
+            ],
+            "end_point": [
+                8,
+                10
+            ],
+            "is_named": false,
+            "parent": 37,
+            "child_count": 0
+        },
+        {
+            "id": 39,
+            "type": ")",
+            "text": ")",
+            "start_byte": 92,
+            "end_byte": 93,
+            "start_point": [
+                8,
+                10
+            ],
+            "end_point": [
+                8,
+                11
+            ],
+            "is_named": false,
+            "parent": 37,
+            "child_count": 0
+        },
+        {
+            "id": 40,
+            "type": "block",
+            "text": "{\n    result := multiply(5, 3)\n    fmt.Println(\"Multiplication:\", result)\n}",
+            "start_byte": 94,
+            "end_byte": 169,
+            "start_point": [
+                8,
+                12
+            ],
+            "end_point": [
+                11,
+                1
+            ],
+            "is_named": true,
+            "parent": 34,
+            "child_count": 4
+        },
+        {
+            "id": 41,
+            "type": "{",
+            "text": "{",
+            "start_byte": 94,
+            "end_byte": 95,
+            "start_point": [
+                8,
+                12
+            ],
+            "end_point": [
+                8,
+                13
+            ],
+            "is_named": false,
+            "parent": 40,
+            "child_count": 0
+        },
+        {
+            "id": 42,
+            "type": "short_var_declaration",
+            "text": "result := multiply(5, 3)",
+            "start_byte": 100,
+            "end_byte": 124,
+            "start_point": [
+                9,
+                4
+            ],
+            "end_point": [
+                9,
+                28
+            ],
+            "is_named": true,
+            "parent": 40,
+            "child_count": 3
+        },
+        {
+            "id": 43,
+            "type": "expression_list",
+            "text": "result",
+            "start_byte": 100,
+            "end_byte": 106,
+            "start_point": [
+                9,
+                4
+            ],
+            "end_point": [
+                9,
+                10
+            ],
+            "is_named": true,
+            "parent": 42,
+            "child_count": 1
+        },
+        {
+            "id": 44,
+            "type": "identifier",
+            "text": "result",
+            "start_byte": 100,
+            "end_byte": 106,
+            "start_point": [
+                9,
+                4
+            ],
+            "end_point": [
+                9,
+                10
+            ],
+            "is_named": true,
+            "parent": 43,
+            "child_count": 0
+        },
+        {
+            "id": 45,
+            "type": ":=",
+            "text": ":=",
+            "start_byte": 107,
+            "end_byte": 109,
+            "start_point": [
+                9,
+                11
+            ],
+            "end_point": [
+                9,
+                13
+            ],
+            "is_named": false,
+            "parent": 42,
+            "child_count": 0
+        },
+        {
+            "id": 46,
+            "type": "expression_list",
+            "text": "multiply(5, 3)",
+            "start_byte": 110,
+            "end_byte": 124,
+            "start_point": [
+                9,
+                14
+            ],
+            "end_point": [
+                9,
+                28
+            ],
+            "is_named": true,
+            "parent": 42,
+            "child_count": 1
+        },
+        {
+            "id": 47,
+            "type": "call_expression",
+            "text": "multiply(5, 3)",
+            "start_byte": 110,
+            "end_byte": 124,
+            "start_point": [
+                9,
+                14
+            ],
+            "end_point": [
+                9,
+                28
+            ],
+            "is_named": true,
+            "parent": 46,
+            "child_count": 2
+        },
+        {
+            "id": 48,
+            "type": "identifier",
+            "text": "multiply",
+            "start_byte": 110,
+            "end_byte": 118,
+            "start_point": [
+                9,
+                14
+            ],
+            "end_point": [
+                9,
+                22
+            ],
+            "is_named": true,
+            "parent": 47,
+            "child_count": 0
+        },
+        {
+            "id": 49,
+            "type": "argument_list",
+            "text": "(5, 3)",
+            "start_byte": 118,
+            "end_byte": 124,
+            "start_point": [
+                9,
+                22
+            ],
+            "end_point": [
+                9,
+                28
+            ],
+            "is_named": true,
+            "parent": 47,
+            "child_count": 5
+        },
+        {
+            "id": 50,
+            "type": "(",
+            "text": "(",
+            "start_byte": 118,
+            "end_byte": 119,
+            "start_point": [
+                9,
+                22
+            ],
+            "end_point": [
+                9,
+                23
+            ],
+            "is_named": false,
+            "parent": 49,
+            "child_count": 0
+        },
+        {
+            "id": 51,
+            "type": "int_literal",
+            "text": "5",
+            "start_byte": 119,
+            "end_byte": 120,
+            "start_point": [
+                9,
+                23
+            ],
+            "end_point": [
+                9,
+                24
+            ],
+            "is_named": true,
+            "parent": 49,
+            "child_count": 0
+        },
+        {
+            "id": 52,
+            "type": ",",
+            "text": ",",
+            "start_byte": 120,
+            "end_byte": 121,
+            "start_point": [
+                9,
+                24
+            ],
+            "end_point": [
+                9,
+                25
+            ],
+            "is_named": false,
+            "parent": 49,
+            "child_count": 0
+        },
+        {
+            "id": 53,
+            "type": "int_literal",
+            "text": "3",
+            "start_byte": 122,
+            "end_byte": 123,
+            "start_point": [
+                9,
+                26
+            ],
+            "end_point": [
+                9,
+                27
+            ],
+            "is_named": true,
+            "parent": 49,
+            "child_count": 0
+        },
+        {
+            "id": 54,
+            "type": ")",
+            "text": ")",
+            "start_byte": 123,
+            "end_byte": 124,
+            "start_point": [
+                9,
+                27
+            ],
+            "end_point": [
+                9,
+                28
+            ],
+            "is_named": false,
+            "parent": 49,
+            "child_count": 0
+        },
+        {
+            "id": 55,
+            "type": "expression_statement",
+            "text": "fmt.Println(\"Multiplication:\", result)",
+            "start_byte": 129,
+            "end_byte": 167,
+            "start_point": [
+                10,
+                4
+            ],
+            "end_point": [
+                10,
+                42
+            ],
+            "is_named": true,
+            "parent": 40,
+            "child_count": 1
+        },
+        {
+            "id": 56,
+            "type": "call_expression",
+            "text": "fmt.Println(\"Multiplication:\", result)",
+            "start_byte": 129,
+            "end_byte": 167,
+            "start_point": [
+                10,
+                4
+            ],
+            "end_point": [
+                10,
+                42
+            ],
+            "is_named": true,
+            "parent": 55,
+            "child_count": 2
+        },
+        {
+            "id": 57,
+            "type": "selector_expression",
+            "text": "fmt.Println",
+            "start_byte": 129,
+            "end_byte": 140,
+            "start_point": [
+                10,
+                4
+            ],
+            "end_point": [
+                10,
+                15
+            ],
+            "is_named": true,
+            "parent": 56,
+            "child_count": 3
+        },
+        {
+            "id": 58,
+            "type": "identifier",
+            "text": "fmt",
+            "start_byte": 129,
+            "end_byte": 132,
+            "start_point": [
+                10,
+                4
+            ],
+            "end_point": [
+                10,
+                7
+            ],
+            "is_named": true,
+            "parent": 57,
+            "child_count": 0
+        },
+        {
+            "id": 59,
+            "type": ".",
+            "text": ".",
+            "start_byte": 132,
+            "end_byte": 133,
+            "start_point": [
+                10,
+                7
+            ],
+            "end_point": [
+                10,
+                8
+            ],
+            "is_named": false,
+            "parent": 57,
+            "child_count": 0
+        },
+        {
+            "id": 60,
+            "type": "field_identifier",
+            "text": "Println",
+            "start_byte": 133,
+            "end_byte": 140,
+            "start_point": [
+                10,
+                8
+            ],
+            "end_point": [
+                10,
+                15
+            ],
+            "is_named": true,
+            "parent": 57,
+            "child_count": 0
+        },
+        {
+            "id": 61,
+            "type": "argument_list",
+            "text": "(\"Multiplication:\", result)",
+            "start_byte": 140,
+            "end_byte": 167,
+            "start_point": [
+                10,
+                15
+            ],
+            "end_point": [
+                10,
+                42
+            ],
+            "is_named": true,
+            "parent": 56,
+            "child_count": 5
+        },
+        {
+            "id": 62,
+            "type": "(",
+            "text": "(",
+            "start_byte": 140,
+            "end_byte": 141,
+            "start_point": [
+                10,
+                15
+            ],
+            "end_point": [
+                10,
+                16
+            ],
+            "is_named": false,
+            "parent": 61,
+            "child_count": 0
+        },
+        {
+            "id": 63,
+            "type": "interpreted_string_literal",
+            "text": "\"Multiplication:\"",
+            "start_byte": 141,
+            "end_byte": 158,
+            "start_point": [
+                10,
+                16
+            ],
+            "end_point": [
+                10,
+                33
+            ],
+            "is_named": true,
+            "parent": 61,
+            "child_count": 2
+        },
+        {
+            "id": 64,
+            "type": "\"",
+            "text": "\"",
+            "start_byte": 141,
+            "end_byte": 142,
+            "start_point": [
+                10,
+                16
+            ],
+            "end_point": [
+                10,
+                17
+            ],
+            "is_named": false,
+            "parent": 63,
+            "child_count": 0
+        },
+        {
+            "id": 65,
+            "type": "\"",
+            "text": "\"",
+            "start_byte": 157,
+            "end_byte": 158,
+            "start_point": [
+                10,
+                32
+            ],
+            "end_point": [
+                10,
+                33
+            ],
+            "is_named": false,
+            "parent": 63,
+            "child_count": 0
+        },
+        {
+            "id": 66,
+            "type": ",",
+            "text": ",",
+            "start_byte": 158,
+            "end_byte": 159,
+            "start_point": [
+                10,
+                33
+            ],
+            "end_point": [
+                10,
+                34
+            ],
+            "is_named": false,
+            "parent": 61,
+            "child_count": 0
+        },
+        {
+            "id": 67,
+            "type": "identifier",
+            "text": "result",
+            "start_byte": 160,
+            "end_byte": 166,
+            "start_point": [
+                10,
+                35
+            ],
+            "end_point": [
+                10,
+                41
+            ],
+            "is_named": true,
+            "parent": 61,
+            "child_count": 0
+        },
+        {
+            "id": 68,
+            "type": ")",
+            "text": ")",
+            "start_byte": 166,
+            "end_byte": 167,
+            "start_point": [
+                10,
+                41
+            ],
+            "end_point": [
+                10,
+                42
+            ],
+            "is_named": false,
+            "parent": 61,
+            "child_count": 0
+        },
+        {
+            "id": 69,
+            "type": "}",
+            "text": "}",
+            "start_byte": 168,
+            "end_byte": 169,
+            "start_point": [
+                11,
+                0
+            ],
+            "end_point": [
+                11,
+                1
+            ],
+            "is_named": false,
+            "parent": 40,
+            "child_count": 0
+        }
+    ],
+    "edges": []
+}
