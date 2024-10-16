@@ -5,7 +5,11 @@ import tree_sitter_python as tspython
 import networkx as nx
 import os
 import json
-from config import LANGUAGE_MAP
+from .config import LANGUAGE_MAP
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 class ASTGenerator:
     def __init__(self):
@@ -84,3 +88,8 @@ class ASTGenerator:
         }
         with open(output_file, 'w') as f:
             json.dump(data, f, indent=4)
+
+if __name__ == "__main__":
+    ast_generator = ASTGenerator()
+    ast_generator.generate_ast("/home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/example.go")
+    

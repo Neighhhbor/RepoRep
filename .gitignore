@@ -165,3 +165,7 @@ DevEval/**
 
 results/**
 *.json
+
+staticfg
+
+multilspy

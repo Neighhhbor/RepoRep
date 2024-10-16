@@ -1,0 +1,34 @@
+digraph "clusterexample.py" {
+	graph [label="example.py"]
+	1 [label="def greet(name):...
+def __init__(self, name, age):...
+def introduce(self):...
+if __name__ == '__main__':
+"]
+	13 [label="person = Person('Alice', 30)
+print(greet(person.name))
+print(person.introduce())
+"]
+	"13_calls" [label="Person
+print
+print" shape=box]
+	13 -> "13_calls" [label=calls style=dashed]
+	1 -> 13 [label="__name__ == '__main__'"]
+	subgraph clustergreet {
+		graph [label=greet]
+		3 [label="\"\"\"A simple greeting function\"\"\"
+return f'Hello, {name}!'
+"]
+	}
+	subgraph cluster__init__ {
+		graph [label=__init__]
+		7 [label="self.name = name
+self.age = age
+"]
+	}
+	subgraph clusterintroduce {
+		graph [label=introduce]
+		10 [label="return f\"My name is {self.name} and I'm {self.age} years old.\"
+"]
+	}
+}

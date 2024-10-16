@@ -1,12 +1,10 @@
-from parsers.file_parser import FileParser
-from parsers.directory_parser import DirectoryParser
 from parsers.repo_parser import RepoParser
 import os
 import json
 import networkx as nx
 
 def main():
-    repo_path = '/home/sxj/Desktop/Workspace/Development/RepoRepresentation/DevEval/Source_Code/Utilities/stellar'
+    repo_path = '/home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples'
     repo_parser = RepoParser()
 
     # 解析仓库
