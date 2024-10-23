@@ -169,3 +169,6 @@ results/**
 staticfg
 
 multilspy
+
+# 忽略所有的 .tar.gz 文件
+*.tar.gz
