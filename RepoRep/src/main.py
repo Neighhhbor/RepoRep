@@ -1,26 +1,40 @@
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from parsers.repo_parser import RepoParser
 import os
 import json
 import networkx as nx
+# from processors.identifier_definition_processor import IdentifierDefinitionProcessor
+
+
+
+def export_graph_to_json(graph, file_path):
+    with open(file_path, 'w') as f:
+        json.dump(nx.node_link_data(graph, edges="links"), f, indent=4)
 
 def main():
-    repo_path = '/home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples'
+    # 设置仓库路径
+    repo_path = "/home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples"
     repo_parser = RepoParser()
 
-    # 解析仓库
-    dir_structure, combined_graph = repo_parser.parse_repo(repo_path)
+    # 解析仓库结构和生成项目图
+    project_graph = repo_parser.parse_repo(repo_path)
 
-    # 确保输出目录存在
-    os.makedirs('./results', exist_ok=True)
+    # 设置结果保存目录
+    results_dir = os.path.join(os.path.dirname(__file__), 'output')
+    os.makedirs(results_dir, exist_ok=True)
 
-    # 导出目录结构
-    with open('./results/directory_structure.json', 'w') as f:
-        json.dump(dir_structure, f, indent=4)
+    # 保存初始解析结果
+    save_initial_results(results_dir, project_graph)
 
-    # 导出合并后的图
-    repo_parser.ast_generator.export_graph_to_json(combined_graph, './results/combined_ast_graph.json')
 
-    print("解析完成。目录结构和AST图已导出到results文件夹。")
+    print("解析完成。所有结果已导出到output文件夹。")
+
+def save_initial_results(results_dir, project_graph):
+    with open(os.path.join(results_dir, 'initial_parse_output.json'), 'w') as f:
+        json.dump(nx.node_link_data(project_graph, edges="links"), f, indent=4)
+
 
 if __name__ == "__main__":
     main()
