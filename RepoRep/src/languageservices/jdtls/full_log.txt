@@ -1,6 +1,0 @@
-WARNING: Using incubator modules: jdk.incubator.vector, jdk.incubator.foreign
-Listening for transport dt_socket at address: 1044
-Oct 25, 2024 5:10:43 PM org.apache.aries.spifly.BaseActivator log
-INFO: Registered provider ch.qos.logback.classic.servlet.LogbackServletContainerInitializer of service jakarta.servlet.ServletContainerInitializer in bundle ch.qos.logback.classic
-Oct 25, 2024 5:10:43 PM org.apache.aries.spifly.BaseActivator log
-INFO: Registered provider ch.qos.logback.classic.spi.LogbackServiceProvider of service org.slf4j.spi.SLF4JServiceProvider in bundle ch.qos.logback.classic
