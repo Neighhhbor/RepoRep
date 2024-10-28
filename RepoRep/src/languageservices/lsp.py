@@ -1,12 +1,14 @@
-import asyncio
-import websockets
+import os
+import sys
 import json
 import socket
 import logging
+import time
 from tqdm import tqdm
+from websockets.sync.client import connect
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filename='lsp.log', filemode='w')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s',filename='lsp.log', filemode='w')
 logger = logging.getLogger(__name__)
 
 # Load the graph from JSON
@@ -17,27 +19,27 @@ def load_graph_data(graph_file_path):
 # Connect to gopls using socket
 def connect_to_gopls():
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client.settimeout(10)  # Set a timeout of 10 seconds for all socket operations
+    client.settimeout(1800)  # Set a timeout of 10 seconds for all socket operations
     client.connect(('localhost', 8080))  # Updated to match the provided gopls command
     return client
 
-# Connect to pylsp using WebSocket
-async def connect_to_pylsp():
+# Connect to pylsp using WebSocket synchronously
+def connect_to_pylsp():
     uri = "ws://localhost:3000"
     try:
-        return await asyncio.wait_for(websockets.connect(uri), timeout=10)
-    except asyncio.TimeoutError:
-        logger.error("Failed to connect to pylsp within the timeout period.")
+        return connect(uri, timeout=10)
+    except Exception as e:
+        logger.error(f"Failed to connect to pylsp: {e}")
         raise
 
 # Send JSON-RPC request over WebSocket (for pylsp)
-async def send_message_pylsp(websocket, message):
+def send_message_pylsp(websocket, message):
     content = json.dumps(message)
     try:
-        await asyncio.wait_for(websocket.send(content), timeout=10)
+        websocket.send(content)
         logger.info(f"Sent to pylsp: {content}")
-    except asyncio.TimeoutError:
-        logger.error("Timeout occurred while trying to send a message to pylsp.")
+    except Exception as e:
+        logger.error(f"Error occurred while trying to send a message to pylsp: {e}")
 
 # Send JSON-RPC request over socket (for gopls)
 def send_message_gopls(client, message):
@@ -69,13 +71,18 @@ def read_response_gopls(client):
 
                 if content_length and len(rest) >= content_length:
                     body = rest[:content_length]
-                    return json.loads(body)
+                    response_json = json.loads(body)
+                    # Handle server notifications or window messages
+                    if "method" in response_json and response_json["method"] == "window/showMessage":
+                        logger.info(f"Received message from gopls: {response_json['params']['message']}")
+                    else:
+                        return response_json
     except socket.timeout:
         logger.error("Timeout occurred while reading response from gopls.")
-        return None
+    return None
 
 # Function to send didOpen notification to pylsp
-async def send_did_open_notification_pylsp(websocket, file_path):
+def send_did_open_notification_pylsp(websocket, file_path):
     with open(file_path, 'r') as f:
         file_content = f.read()
 
@@ -92,15 +99,26 @@ async def send_did_open_notification_pylsp(websocket, file_path):
         "method": "textDocument/didOpen",
         "params": params
     }
-    await send_message_pylsp(websocket, did_open_request)
+    send_message_pylsp(websocket, did_open_request)
+    try:
+        response = websocket.recv()
+        response_json = json.loads(response)
+        logger.info(f"Received didOpen response from pylsp: {response_json}")
+    except Exception as e:
+        logger.error(f"Error occurred while receiving didOpen response from pylsp: {e}")
 
 # Send initialize request to pylsp
-async def initialize_pylsp(websocket, root_uri):
+def initialize_pylsp(websocket, root_uri):
     params = {
         "processId": None,
         "rootUri": root_uri,
         "capabilities": {},
-        "workspaceFolders": None
+        "workspaceFolders": [
+            {
+                "uri": root_uri,
+                "name": "example_workspace"
+            }
+        ]
     }
     initialize_request = {
         "jsonrpc": "2.0",
@@ -108,10 +126,13 @@ async def initialize_pylsp(websocket, root_uri):
         "method": "initialize",
         "params": params
     }
-    await send_message_pylsp(websocket, initialize_request)
-    response = await asyncio.wait_for(websocket.recv(), timeout=10)
-    response_json = json.loads(response)
-    logger.info(f"Received initialization response from pylsp: {response_json}")
+    send_message_pylsp(websocket, initialize_request)
+    try:
+        response = websocket.recv()
+        response_json = json.loads(response)
+        logger.info(f"Received initialization response from pylsp: {response_json}")
+    except Exception as e:
+        logger.error(f"Error occurred while receiving initialization response from pylsp: {e}")
 
 # Send initialize request to gopls
 def initialize_gopls(client, root_uri):
@@ -119,7 +140,12 @@ def initialize_gopls(client, root_uri):
         "processId": None,
         "rootUri": root_uri,
         "capabilities": {},
-        "workspaceFolders": None
+        "workspaceFolders": [
+            {
+                "uri": root_uri,
+                "name": "example_workspace"
+            }
+        ]
     }
     initialize_request = {
         "jsonrpc": "2.0",
@@ -131,6 +157,30 @@ def initialize_gopls(client, root_uri):
     response = read_response_gopls(client)
     logger.info(f"Received initialization response from gopls: {response}")
 
+    # Send 'initialized' notification after receiving initialization response
+    initialized_request = {
+        "jsonrpc": "2.0",
+        "method": "initialized",
+        "params": {}
+    }
+    send_message_gopls(client, initialized_request)
+    logger.info("Sent 'initialized' notification to gopls.")
+
+    # Poll for server readiness
+    for _ in range(60):  # Poll for up to 60 seconds
+        time.sleep(3)  # Wait for three seconds to give gopls more time to initialize
+        ready_check = {
+            "jsonrpc": "2.0",
+            "method": "initialized",
+            "params": {}
+        }
+        send_message_gopls(client, ready_check)
+        response = read_response_gopls(client)
+        if response and 'result' in response:
+            logger.info("gopls is fully initialized and ready.")
+            return
+    logger.warning("gopls may not be fully initialized, continuing with caution.")
+
 # Extract identifier text from file given byte range
 def extract_text_from_file(file_path, start_byte, end_byte):
     try:
@@ -141,8 +191,8 @@ def extract_text_from_file(file_path, start_byte, end_byte):
         logger.error(f"An error occurred while extracting text from file {file_path}: {e}")
         return None
 
-# Request definition for Python identifiers (async, WebSocket)
-async def request_definition_pylsp(websocket, file_uri, line, character, node_text, results):
+# Request definition for Python identifiers (WebSocket)
+def request_definition_pylsp(websocket, file_uri, line, character, node_text, results):
     params = {
         "textDocument": {
             "uri": file_uri
@@ -160,11 +210,9 @@ async def request_definition_pylsp(websocket, file_uri, line, character, node_te
     }
 
     try:
-        # Ensure the document is open before requesting definition
-        await send_did_open_notification_pylsp(websocket, file_uri[7:])
         logger.info(f"Requesting definition for '{node_text}' at {file_uri}:{line}:{character}")
-        await send_message_pylsp(websocket, definition_request)
-        response = await asyncio.wait_for(websocket.recv(), timeout=10)
+        send_message_pylsp(websocket, definition_request)
+        response = websocket.recv()
         response_json = json.loads(response)
         logger.info(f"Received response for '{node_text}': {response_json}")
         if "result" in response_json and response_json["result"]:
@@ -179,13 +227,6 @@ async def request_definition_pylsp(websocket, file_uri, line, character, node_te
                 "node_text": node_text,
                 "definition": None
             })
-    except asyncio.TimeoutError:
-        logger.error(f"Timeout occurred while waiting for definition response for '{node_text}'.")
-        results.append({
-            "node_text": node_text,
-            "definition": None,
-            "error": "Timeout occurred"
-        })
     except Exception as e:
         logger.error(f"An error occurred while requesting definition for '{node_text}': {e}")
         results.append({
@@ -229,7 +270,7 @@ def request_definition_gopls(client, file_uri, line, character, node_text, resul
             "definition": None
         })
 
-async def main(graph_file_path, output_file_path):
+def main(graph_file_path, output_file_path):
     # Load the graph data
     graph_data = load_graph_data(graph_file_path)
     
@@ -240,23 +281,30 @@ async def main(graph_file_path, output_file_path):
     # List to collect results
     results = []
 
+    # Global set to track opened files
+    opened_files = set()
+
     try:
         # Attempt to connect to pylsp
-        pylsp_websocket = await connect_to_pylsp()  # Await to establish the WebSocket connection
-        await initialize_pylsp(pylsp_websocket, "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples")
+        pylsp_websocket = connect_to_pylsp()  # Establish the WebSocket connection
+        initialize_pylsp(pylsp_websocket, "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/wire")
         
         # Attempt to connect to gopls
         gopls_client = connect_to_gopls()  # Connect to gopls
-        initialize_gopls(gopls_client, "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples")
-
-        # Track which files have been opened already
-        opened_files = set()
+        initialize_gopls(gopls_client, "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/wire")
 
         # Progress bar setup with tqdm
         with tqdm(total=len(graph_data['nodes']), desc="Processing Nodes") as pbar:
             # Iterate over nodes to find definitions
             for node in graph_data['nodes']:
                 try:
+                    # Extract the file path from the node
+                    file_path = node.get('file_path')
+                    if not file_path:
+                        logger.warning(f"Warning: 'file_path' is missing for node {node.get('id')}. Skipping node.")
+                        pbar.update(1)
+                        continue
+
                     if node['type'] == 'identifier':
                         # Use the file_path directly from the node
                         file_path = node.get('file_path')
@@ -289,13 +337,26 @@ async def main(graph_file_path, output_file_path):
                         # Open the file in the LSP server if not already opened
                         if file_path not in opened_files:
                             if file_path.endswith('.py'):
-                                await send_did_open_notification_pylsp(pylsp_websocket, file_path)
+                                send_did_open_notification_pylsp(pylsp_websocket, file_path)
+                            else:
+                                send_message_gopls(gopls_client, {
+                                    "jsonrpc": "2.0",
+                                    "method": "textDocument/didOpen",
+                                    "params": {
+                                        "textDocument": {
+                                            "uri": file_uri,
+                                            "languageId": "go",
+                                            "version": 1,
+                                            "text": open(file_path, 'r').read()
+                                        }
+                                    }
+                                })
                             opened_files.add(file_path)
 
                         # Request definitions using the correct LSP server based on the file type
                         if file_path.endswith('.py'):
                             # Use pylsp for Python files
-                            await request_definition_pylsp(pylsp_websocket, file_uri, line, character, node_text, results)
+                            request_definition_pylsp(pylsp_websocket, file_uri, line, character, node_text, results)
                         elif file_path.endswith('.go'):
                             # Use gopls for Go files
                             request_definition_gopls(gopls_client, file_uri, line, character, node_text, results)
@@ -315,7 +376,7 @@ async def main(graph_file_path, output_file_path):
     finally:
         # Close both clients if they were successfully initialized
         if pylsp_websocket is not None:
-            await pylsp_websocket.close()  # Ensure that the WebSocket is closed properly
+            pylsp_websocket.close()  # Ensure that the WebSocket is closed properly
         if gopls_client is not None:
             gopls_client.close()  # Close the gopls socket connection
 
@@ -323,11 +384,13 @@ async def main(graph_file_path, output_file_path):
         with open(output_file_path, 'w') as f:
             if results:
                 json.dump(results, f, indent=4)
+                logger.info(f"Definitions saved to {output_file_path}")
             else:
                 json.dump({"message": "No definitions were found."}, f, indent=4)
+                logger.info(f"No definitions were found.")
 
 # Run the main function
 if __name__ == "__main__":
     graph_file_path = "/home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/src/output/initial_parse_output.json"
     output_file_path = "/home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/src/output/definition_results.json"
-    asyncio.run(main(graph_file_path, output_file_path))
+    main(graph_file_path, output_file_path)
