@@ -6,6 +6,9 @@ from tree_sitter import Language, Parser
 import tree_sitter_java as tsjava
 import logging  # 使用 logging 代替 print
 from repo_parser import EDGE_TYPE_MAP  # Assuming this module provides EDGE_TYPE_MAP
+import sys
+import argparse
+
 
 # 配置日志
 logging.basicConfig(
@@ -115,8 +118,17 @@ class GraphBuilder:
 
 def main():
     """主程序入口，加载现有图并构建关系。"""
-    reponame = "aixcoderhub"
-    graph_path = f'/home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/src/output/{reponame}/processed_graph.json'
+    parser = argparse.ArgumentParser(description="Parse a source code repository and generate its representation graph.")
+    parser.add_argument('repo_path', type=str, help="Path to the repository to be parsed.")
+    parser.add_argument('--output_dir', type=str, default="./output", help="Directory where the output will be saved.")
+    args = parser.parse_args()
+
+    repo_path = args.repo_path
+    results_dir = os.path.join(args.output_dir, os.path.basename(repo_path))
+    os.makedirs(results_dir, exist_ok=True)
+
+    reponame = repo_path.split('/')[-1]
+    graph_path = os.path.join(results_dir, 'processed_graph.json')
 
     try:
         with open(graph_path, 'r') as f:
@@ -132,7 +144,7 @@ def main():
     builder.build_contains_relationship()
     builder.build_calls_relationship()
 
-    output_path = f'/home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/src/output/{reponame}/relationgraph.json'
+    output_path = os.path.join(results_dir, 'relationgraph.json')
     try:
         with open(output_path, 'w') as f:
             json.dump(nx.node_link_data(graph, edges="links"), f, indent=4)

@@ -9,14 +9,14 @@ from tqdm import tqdm  # Import tqdm for the progress bar
 
 # Configure logging
 logging.basicConfig(
-    level=logging.INFO,  # Set to DEBUG to capture all debug messages
+    level=logging.DEBUG,  # Set to DEBUG to capture all debug messages
     format='%(asctime)s - %(levelname)s - %(message)s',
 )
 
 LSP_HOST = 'localhost'
-LSP_PORT = 5006
+LSP_PORT = 8080
 
-ROOT_URI = "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/MyFirstClass"
+ROOT_URI = "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Go/hello"
 opened_files = set()
 request_id = 1
 pending_requests = {}  # Track requests by their IDs
@@ -110,22 +110,14 @@ def initialize(sock):
             "rootUri": ROOT_URI,
             "capabilities": {},
             "workspaceFolders": [{"uri": ROOT_URI, "name": "Workspace"}],
-            "settings": {
-                "java": {
-                    "home": "/usr/lib/jvm/java-17-openjdk-amd64",
-                    "project": {
-                        "referencedLibraries": ["lib/**/*.jar"]
-                    }
-                }
-            }
         }
     }
     response = send_request_and_wait(sock, message)
     if response and "result" in response:
-        logging.info("Java Language Server initialized successfully.")
+        logging.info("Go Language Server initialized successfully.")
         send_initialized_notification(sock)
     else:
-        logging.error("Failed to initialize Java Language Server.")
+        logging.error("Failed to initialize Go Language Server.")
 
 
 def send_initialized_notification(sock):
@@ -146,7 +138,7 @@ def did_open_file(sock, file_uri, content):
         "params": {
             "textDocument": {
                 "uri": file_uri,
-                "languageId": "java",
+                "languageId": "Go",
                 "version": 1,
                 "text": content
             }
@@ -206,7 +198,7 @@ def process_ast_nodes(sock, graph):
 
 def main():
     """Main function to connect to the server and process AST nodes."""
-    reponame = 'MyFirstClass'
+    reponame = 'hello'
     graph_path = f'/home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/src/output/{reponame}/repoparser.json'
     try:
         with open(graph_path, 'r') as f:
@@ -233,4 +225,4 @@ def main():
 
 
 if __name__ == "__main__":
-
+    main()

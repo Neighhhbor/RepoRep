@@ -1,0 +1,17 @@
+program [0, 0] - [18, 0]
+  package_declaration [0, 0] - [0, 24]
+    identifier [0, 8] - [0, 23]
+  import_declaration [2, 0] - [2, 41]
+      name: identifier [2, 29] - [2, 40]
+  import_declaration [3, 0] - [3, 42]
+ 
+      name: identifier [3, 29] - [3, 41]
+  class_declaration [5, 0] - [16, 1]
+   
+    name: identifier [5, 13] - [5, 17]
+   
+      method_declaration [6, 4] - [15, 5]
+       
+        name: identifier [6, 23] - [6, 27]
+        
+       

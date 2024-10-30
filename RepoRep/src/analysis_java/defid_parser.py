@@ -2,6 +2,9 @@ import networkx as nx
 import json
 import logging
 from tqdm import tqdm  # 引入 tqdm 进度条库
+import sys
+import argparse
+import os
 
 # 配置日志
 logging.basicConfig(
@@ -9,6 +12,10 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s',
 )
 logger = logging.getLogger(__name__)  # 创建日志记录器
+
+
+# 定义一个全局缓存字典
+file_id_cache = {}
 
 def find_definition_node(graph, definition):
     """
@@ -29,25 +36,61 @@ def find_definition_node(graph, definition):
 
 def find_file_id_by_uri(graph, uri):
     """
-    根据 URI 在图中找到对应的文件节点 ID (file_id)。
+    根据 URI 在图中找到对应的文件节点 ID (file_id)，并缓存结果以提高性能。
     """
+    # 如果缓存中已经有这个 URI 的对应 ID，直接返回
+    if uri in file_id_cache:
+        return file_id_cache[uri]
+
+    # 遍历图找到匹配的文件节点，并缓存结果
     for node_id, node_data in graph.nodes(data=True):
         if node_data.get("type") == "file" and node_data.get("path") == uri:
-            return node_id  # 返回文件节点的 ID（file_id）
-    return None  # 未找到文件节点
+            file_id_cache[uri] = node_id  # 缓存文件 ID
+            return node_id
+
+    # 未找到文件节点，返回 None
+    return None
+
 
 def find_node_in_file(graph, file_id, start_line, start_char, end_line, end_char):
     """
-    在给定的文件节点中查找与位置匹配的 AST 节点。
+    递归地遍历给定文件的子树，查找类型为 identifier 且位置匹配的 AST 节点。
     """
-    for node_id, node_data in graph.nodes(data=True):
-        if node_data.get("file_id") == file_id:
-            start_point = node_data.get("start_point", [None, None])
-            end_point = node_data.get("end_point", [None, None])
-            if (start_point[0] == start_line and start_point[1] == start_char
-                and end_point[0] == end_line and end_point[1] == end_char):
-                return node_id
+    file_node = graph.nodes[file_id]
+    children_ids = file_node.get("children", [])
+
+    # 在子树中递归查找符合条件的 identifier 节点
+    for child_id in children_ids:
+        result = find_identifier_in_subtree(graph, child_id, start_line, start_char, end_line, end_char)
+        if result:
+            return result  # 找到匹配节点后立即返回其 ID
+
     return None  # 未找到匹配的节点
+
+def find_identifier_in_subtree(graph, node_id, start_line, start_char, end_line, end_char):
+    """
+    递归地在子树中查找类型为 identifier 且位置匹配的节点。
+    """
+    node_data = graph.nodes[node_id]
+
+    # 如果节点类型是 identifier，检查它的位置是否匹配
+    if node_data.get("type") == "identifier":
+        start_point = node_data.get("start_point", [None, None])
+        end_point = node_data.get("end_point", [None, None])
+
+        if (start_point[0] == start_line and start_point[1] == start_char
+                and end_point[0] == end_line and end_point[1] == end_char):
+            return node_id  # 找到匹配的 identifier 节点
+
+    # 递归地检查子节点
+    children_ids = node_data.get("children", [])
+    for child_id in children_ids:
+        result = find_identifier_in_subtree(graph, child_id, start_line, start_char, end_line, end_char)
+        if result:
+            return result  # 找到匹配节点后立即返回其 ID
+
+    return None  # 未找到匹配的节点
+
 
 def add_definition_id_to_nodes(graph):
     """
@@ -97,9 +140,16 @@ def main():
     """
     主程序入口，加载图数据，处理 definition 信息，并保存结果。
     """
-    reponame = 'aixcoderhub'
-    input_path = f'/home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/src/output/{reponame}/definitiongraph.json'
-    output_path = f'/home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/src/output/{reponame}/processed_graph.json'
+    parser = argparse.ArgumentParser(description="Parse a source code repository and generate its representation graph.")
+    parser.add_argument('repo_path', type=str, help="Path to the repository to be parsed.")
+    parser.add_argument('--output_dir', type=str, default="./output", help="Directory where the output will be saved.")
+    args = parser.parse_args()
+
+    repo_path = args.repo_path
+    results_dir = os.path.join(args.output_dir, os.path.basename(repo_path))
+    os.makedirs(results_dir, exist_ok=True)
+    input_path = os.path.join(results_dir, 'definitiongraph.json')
+    output_path = os.path.join(results_dir, 'processed_graph.json')
 
     graph = load_graph(input_path)
     if graph is None:
@@ -110,3 +160,25 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# import cProfile
+# import pstats
+# import io
+
+# def profile_code():
+#     # 创建一个 cProfile 运行器
+#     pr = cProfile.Profile()
+#     pr.enable()  # 开始性能分析
+
+#     main()  # 运行你要分析的主程序
+
+#     pr.disable()  # 停止性能分析
+
+#     # 将性能分析结果打印到控制台
+#     s = io.StringIO()
+#     ps = pstats.Stats(pr, stream=s).sort_stats('cumulative')  # 按累计时间排序
+#     ps.print_stats()
+#     print(s.getvalue())
+
+# if __name__ == "__main__":
+#     profile_code()
