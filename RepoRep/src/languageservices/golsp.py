@@ -16,7 +16,7 @@ logging.basicConfig(
 LSP_HOST = 'localhost'
 LSP_PORT = 5006
 
-ROOT_URI = "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/aixcoderhub"
+ROOT_URI = "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/MyFirstClass"
 opened_files = set()
 request_id = 1
 pending_requests = {}  # Track requests by their IDs
@@ -166,8 +166,8 @@ def request_definition(sock, file_uri, position):
         }
     }
     response = send_request_and_wait(sock, message)
-    logging.debug(f"Definition request response: {response}")
     if response and "result" in response:
+        logging.debug(f"Definition found: {response['result']}")
         return response["result"]
     return None
 
@@ -179,7 +179,7 @@ def process_ast_nodes(sock, graph):
     # Use tqdm to create a progress bar
     with tqdm(total=total_nodes, desc="Processing AST Nodes", unit="node") as pbar:
         for node_id, node_data in graph.nodes(data=True):
-            if node_data["type"] in ['identifier']:
+            if node_data["type"] in ["method_declaration", "class_declaration", 'identifier']:
                 file_id = node_data["file_id"]
                 file_path = graph.nodes[file_id]["path"]
                 file_uri = f"file://{file_path}"
@@ -206,7 +206,7 @@ def process_ast_nodes(sock, graph):
 
 def main():
     """Main function to connect to the server and process AST nodes."""
-    reponame = ROOT_URI.split('/')[-1]
+    reponame = 'MyFirstClass'
     graph_path = f'/home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/src/output/{reponame}/repoparser.json'
     try:
         with open(graph_path, 'r') as f:
@@ -222,7 +222,7 @@ def main():
             logging.debug("Cannot connect to LSP server.")
             return
 
-        sock.settimeout(1.0)  # Set a reasonable timeout for socket operations
+        sock.settimeout(10.0)  # Set a reasonable timeout for socket operations
         initialize(sock)
         process_ast_nodes(sock, graph)
 
@@ -233,4 +233,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+

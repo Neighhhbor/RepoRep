@@ -1,0 +1,1435 @@
+2024-10-29 16:31:09,534 - DEBUG - Sending Request (ID: 1):
+Content-Length: 506
+
+{"jsonrpc": "2.0", "method": "initialize", "params": {"processId": 1046714, "rootUri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project", "capabilities": {}, "workspaceFolders": [{"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project", "name": "Workspace"}], "settings": {"java": {"home": "/usr/lib/jvm/java-17-openjdk-amd64", "project": {"referencedLibraries": ["lib/**/*.jar"]}}}}, "id": 1}
+2024-10-29 16:31:10,707 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:10 PM >> initialize"
+  }
+}
+2024-10-29 16:31:10,708 - INFO - Log Message from Server: Oct 29, 2024, 4:31:10 PM >> initialize
+2024-10-29 16:31:10,713 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:10 PM Initializing Java Language Server 1.41.0.202410181550"
+  }
+}
+2024-10-29 16:31:10,713 - INFO - Log Message from Server: Oct 29, 2024, 4:31:10 PM Initializing Java Language Server 1.41.0.202410181550
+2024-10-29 16:31:10,714 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:10 PM Started org.eclipse.m2e.core 0ms"
+  }
+}
+2024-10-29 16:31:10,714 - INFO - Log Message from Server: Oct 29, 2024, 4:31:10 PM Started org.eclipse.m2e.core 0ms
+2024-10-29 16:31:10,781 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:10 PM class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started"
+  }
+}
+2024-10-29 16:31:10,781 - INFO - Log Message from Server: Oct 29, 2024, 4:31:10 PM class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+2024-10-29 16:31:10,781 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:10 PM Main thread is waiting"
+  }
+}
+2024-10-29 16:31:10,781 - INFO - Log Message from Server: Oct 29, 2024, 4:31:10 PM Main thread is waiting
+2024-10-29 16:31:11,312 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:11 PM ProjectRegistryRefreshJob finished 598ms"
+  }
+}
+2024-10-29 16:31:11,312 - INFO - Log Message from Server: Oct 29, 2024, 4:31:11 PM ProjectRegistryRefreshJob finished 598ms
+2024-10-29 16:31:11,322 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:11 PM Started org.eclipse.buildship.core 10ms"
+  }
+}
+2024-10-29 16:31:11,322 - INFO - Log Message from Server: Oct 29, 2024, 4:31:11 PM Started org.eclipse.buildship.core 10ms
+2024-10-29 16:31:11,337 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:11 PM Static Commands: []"
+  }
+}
+2024-10-29 16:31:11,337 - INFO - Log Message from Server: Oct 29, 2024, 4:31:11 PM Static Commands: []
+2024-10-29 16:31:11,337 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:11 PM Non-Static Commands: [java.project.import, java.project.changeImportedProjects, java.navigate.openTypeHierarchy, java.project.resolveStackTraceLocation, java.edit.handlePasteEvent, java.edit.stringFormatting, java.project.getSettings, java.project.resolveWorkspaceSymbol, java.project.upgradeGradle, java.project.createModuleInfo, java.vm.getAllInstalls, java.edit.organizeImports, java.project.refreshDiagnostics, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.updateSettings, java.project.getAll, java.reloadBundles, java.project.isTestFile, java.project.resolveText, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.smartSemicolonDetection, java.project.updateSourceAttachment, java.project.updateClassPaths, java.decompile, java.protobuf.generateSources, java.project.resolveSourceAttachment, java.project.updateJdk, java.project.addToSourcePath, java.completion.onDidSelect]"
+  }
+}
+2024-10-29 16:31:11,338 - INFO - Log Message from Server: Oct 29, 2024, 4:31:11 PM Non-Static Commands: [java.project.import, java.project.changeImportedProjects, java.navigate.openTypeHierarchy, java.project.resolveStackTraceLocation, java.edit.handlePasteEvent, java.edit.stringFormatting, java.project.getSettings, java.project.resolveWorkspaceSymbol, java.project.upgradeGradle, java.project.createModuleInfo, java.vm.getAllInstalls, java.edit.organizeImports, java.project.refreshDiagnostics, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.updateSettings, java.project.getAll, java.reloadBundles, java.project.isTestFile, java.project.resolveText, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.smartSemicolonDetection, java.project.updateSourceAttachment, java.project.updateClassPaths, java.decompile, java.protobuf.generateSources, java.project.resolveSourceAttachment, java.project.updateJdk, java.project.addToSourcePath, java.completion.onDidSelect]
+2024-10-29 16:31:11,342 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "language/status",
+  "params": {
+    "type": "Starting",
+    "message": "Init..."
+  }
+}
+2024-10-29 16:31:11,343 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "language/status",
+  "params": {
+    "type": "Starting",
+    "message": "0% Starting Java Language Server"
+  }
+}
+2024-10-29 16:31:11,353 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "capabilities": {
+      "textDocumentSync": {
+        "openClose": true,
+        "change": 2,
+        "save": {
+          "includeText": true
+        }
+      },
+      "hoverProvider": true,
+      "completionProvider": {
+        "resolveProvider": true,
+        "triggerCharacters": [
+          ".",
+          "@",
+          "#",
+          "*",
+          " "
+        ]
+      },
+      "signatureHelpProvider": {
+        "triggerCharacters": [
+          "(",
+          ","
+        ]
+      },
+      "definitionProvider": true,
+      "typeDefinitionProvider": true,
+      "implementationProvider": true,
+      "referencesProvider": true,
+      "documentHighlightProvider": true,
+      "documentSymbolProvider": true,
+      "workspaceSymbolProvider": true,
+      "codeActionProvider": {
+        "codeActionKinds": [],
+        "resolveProvider": false
+      },
+      "codeLensProvider": {
+        "resolveProvider": true
+      },
+      "documentFormattingProvider": true,
+      "documentRangeFormattingProvider": true,
+      "documentOnTypeFormattingProvider": {
+        "firstTriggerCharacter": ";",
+        "moreTriggerCharacter": [
+          "\n",
+          "}"
+        ]
+      },
+      "renameProvider": {
+        "prepareProvider": true
+      },
+      "foldingRangeProvider": true,
+      "declarationProvider": true,
+      "executeCommandProvider": {
+        "commands": [
+          "java.project.import",
+          "java.project.changeImportedProjects",
+          "java.navigate.openTypeHierarchy",
+          "java.project.resolveStackTraceLocation",
+          "java.edit.handlePasteEvent",
+          "java.edit.stringFormatting",
+          "java.project.getSettings",
+          "java.project.resolveWorkspaceSymbol",
+          "java.project.upgradeGradle",
+          "java.project.createModuleInfo",
+          "java.vm.getAllInstalls",
+          "java.edit.organizeImports",
+          "java.project.refreshDiagnostics",
+          "java.project.removeFromSourcePath",
+          "java.project.listSourcePaths",
+          "java.project.updateSettings",
+          "java.project.getAll",
+          "java.reloadBundles",
+          "java.project.isTestFile",
+          "java.project.resolveText",
+          "java.project.getClasspaths",
+          "java.navigate.resolveTypeHierarchy",
+          "java.edit.smartSemicolonDetection",
+          "java.project.updateSourceAttachment",
+          "java.project.updateClassPaths",
+          "java.decompile",
+          "java.protobuf.generateSources",
+          "java.project.resolveSourceAttachment",
+          "java.project.updateJdk",
+          "java.project.addToSourcePath",
+          "java.completion.onDidSelect"
+        ]
+      },
+      "workspace": {
+        "workspaceFolders": {
+          "supported": true,
+          "changeNotifications": true
+        }
+      },
+      "typeHierarchyProvider": true,
+      "callHierarchyProvider": true,
+      "selectionRangeProvider": true,
+      "semanticTokensProvider": {
+        "legend": {
+          "tokenTypes": [
+            "namespace",
+            "class",
+            "interface",
+            "enum",
+            "enumMember",
+            "type",
+            "typeParameter",
+            "method",
+            "property",
+            "variable",
+            "parameter",
+            "modifier",
+            "keyword",
+            "annotation",
+            "annotationMember",
+            "record",
+            "recordComponent"
+          ],
+          "tokenModifiers": [
+            "abstract",
+            "static",
+            "readonly",
+            "deprecated",
+            "declaration",
+            "documentation",
+            "public",
+            "private",
+            "protected",
+            "native",
+            "generic",
+            "typeArgument",
+            "importDeclaration",
+            "constructor"
+          ]
+        },
+        "range": false,
+        "full": {
+          "delta": false
+        },
+        "documentSelector": [
+          {
+            "language": "java",
+            "scheme": "file"
+          },
+          {
+            "language": "java",
+            "scheme": "jdt"
+          }
+        ]
+      },
+      "inlayHintProvider": true
+    }
+  }
+}
+2024-10-29 16:31:11,353 - INFO - Java Language Server initialized successfully.
+2024-10-29 16:31:11,353 - DEBUG - Sending Request (ID: 2):
+Content-Length: 66
+
+{"jsonrpc": "2.0", "method": "initialized", "params": {}, "id": 2}
+Processing AST Nodes:   0%|          | 0/312 [00:00<?, ?node/s]2024-10-29 16:31:11,358 - DEBUG - Sending Request (ID: 3):
+Content-Length: 534
+
+{"jsonrpc": "2.0", "method": "textDocument/didOpen", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java", "languageId": "java", "version": 1, "text": "package example_project.utils;\n\npublic class StringUtils {\n    // \u9759\u6001\u65b9\u6cd5\uff1a\u5b57\u7b26\u4e32\u53cd\u8f6c\n    public static String reverse(String input) {\n        return new StringBuilder(input).reverse().toString();\n    }\n}\n"}}, "id": 3}
+2024-10-29 16:31:11,358 - DEBUG - Sending Request (ID: 4):
+Content-Length: 276
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java"}, "position": {"line": 0, "character": 8}}, "id": 4}
+2024-10-29 16:31:11,358 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:11 PM >> initialized"
+  }
+}
+2024-10-29 16:31:11,358 - INFO - Log Message from Server: Oct 29, 2024, 4:31:11 PM >> initialized
+2024-10-29 16:31:11,358 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:11 PM RepositoryRegistryUpdateJob finished 10ms"
+  }
+}
+2024-10-29 16:31:11,359 - INFO - Log Message from Server: Oct 29, 2024, 4:31:11 PM RepositoryRegistryUpdateJob finished 10ms
+2024-10-29 16:31:11,371 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "language/status",
+  "params": {
+    "type": "ProjectStatus",
+    "message": "OK"
+  }
+}
+2024-10-29 16:31:11,412 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "language/status",
+  "params": {
+    "type": "Starting",
+    "message": "100% Starting Java Language Server"
+  }
+}
+2024-10-29 16:31:11,412 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:11 PM Workspace initialized in 27ms"
+  }
+}
+2024-10-29 16:31:11,412 - INFO - Log Message from Server: Oct 29, 2024, 4:31:11 PM Workspace initialized in 27ms
+2024-10-29 16:31:11,412 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "language/status",
+  "params": {
+    "type": "Started",
+    "message": "Ready"
+  }
+}
+2024-10-29 16:31:11,412 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "language/status",
+  "params": {
+    "type": "Starting",
+    "message": "100% Starting Java Language Server"
+  }
+}
+2024-10-29 16:31:11,412 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:11 PM >> initialization job finished"
+  }
+}
+2024-10-29 16:31:11,412 - INFO - Log Message from Server: Oct 29, 2024, 4:31:11 PM >> initialization job finished
+2024-10-29 16:31:11,412 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "language/status",
+  "params": {
+    "type": "ServiceReady",
+    "message": "ServiceReady"
+  }
+}
+2024-10-29 16:31:11,412 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:11 PM >> build jobs finished"
+  }
+}
+2024-10-29 16:31:11,412 - INFO - Log Message from Server: Oct 29, 2024, 4:31:11 PM >> build jobs finished
+2024-10-29 16:31:11,412 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:11 PM >> registerWatchers'"
+  }
+}
+2024-10-29 16:31:11,412 - INFO - Log Message from Server: Oct 29, 2024, 4:31:11 PM >> registerWatchers'
+2024-10-29 16:31:11,862 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:11 PM Reconciled 1. Took 0 ms"
+  }
+}
+2024-10-29 16:31:11,863 - INFO - Log Message from Server: Oct 29, 2024, 4:31:11 PM Reconciled 1. Took 0 ms
+2024-10-29 16:31:11,871 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 4,
+  "result": []
+}
+2024-10-29 16:31:11,872 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 4, 'result': []}
+Processing AST Nodes:   3%|▎         | 9/312 [00:00<00:17, 17.52node/s]2024-10-29 16:31:11,872 - DEBUG - Sending Request (ID: 5):
+Content-Length: 277
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java"}, "position": {"line": 0, "character": 24}}, "id": 5}
+2024-10-29 16:31:11,874 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 5,
+  "result": []
+}
+2024-10-29 16:31:11,874 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 5, 'result': []}
+2024-10-29 16:31:11,874 - DEBUG - Sending Request (ID: 6):
+Content-Length: 277
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java"}, "position": {"line": 2, "character": 13}}, "id": 6}
+2024-10-29 16:31:11,876 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 6,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java",
+      "range": {
+        "start": {
+          "line": 2,
+          "character": 13
+        },
+        "end": {
+          "line": 2,
+          "character": 24
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:11,876 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 6, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java', 'range': {'start': {'line': 2, 'character': 13}, 'end': {'line': 2, 'character': 24}}}]}
+2024-10-29 16:31:11,876 - DEBUG - Sending Request (ID: 7):
+Content-Length: 277
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java"}, "position": {"line": 4, "character": 25}}, "id": 7}
+2024-10-29 16:31:11,878 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 7,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java",
+      "range": {
+        "start": {
+          "line": 4,
+          "character": 25
+        },
+        "end": {
+          "line": 4,
+          "character": 32
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:11,878 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 7, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java', 'range': {'start': {'line': 4, 'character': 25}, 'end': {'line': 4, 'character': 32}}}]}
+2024-10-29 16:31:11,878 - DEBUG - Sending Request (ID: 8):
+Content-Length: 277
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java"}, "position": {"line": 4, "character": 40}}, "id": 8}
+2024-10-29 16:31:11,883 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 8,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java",
+      "range": {
+        "start": {
+          "line": 4,
+          "character": 40
+        },
+        "end": {
+          "line": 4,
+          "character": 45
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:11,883 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 8, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java', 'range': {'start': {'line': 4, 'character': 40}, 'end': {'line': 4, 'character': 45}}}]}
+2024-10-29 16:31:11,883 - DEBUG - Sending Request (ID: 9):
+Content-Length: 277
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java"}, "position": {"line": 5, "character": 33}}, "id": 9}
+2024-10-29 16:31:11,889 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 9,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java",
+      "range": {
+        "start": {
+          "line": 4,
+          "character": 40
+        },
+        "end": {
+          "line": 4,
+          "character": 45
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:11,889 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 9, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java', 'range': {'start': {'line': 4, 'character': 40}, 'end': {'line': 4, 'character': 45}}}]}
+2024-10-29 16:31:11,889 - DEBUG - Sending Request (ID: 10):
+Content-Length: 278
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java"}, "position": {"line": 5, "character": 40}}, "id": 10}
+2024-10-29 16:31:11,896 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 10,
+  "result": []
+}
+2024-10-29 16:31:11,896 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 10, 'result': []}
+2024-10-29 16:31:11,896 - DEBUG - Sending Request (ID: 11):
+Content-Length: 278
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java"}, "position": {"line": 5, "character": 50}}, "id": 11}
+2024-10-29 16:31:11,901 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 11,
+  "result": []
+}
+2024-10-29 16:31:11,901 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 11, 'result': []}
+2024-10-29 16:31:11,901 - DEBUG - Sending Request (ID: 12):
+Content-Length: 905
+
+{"jsonrpc": "2.0", "method": "textDocument/didOpen", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java", "languageId": "java", "version": 1, "text": "package example_project.utils;\n\nimport example_project.utils.StringUtils;  // \u8de8\u6587\u4ef6\u5f15\u7528\n\npublic class NetworkUtils {\n    // \u6a21\u62df\u7f51\u7edc ping \u65b9\u6cd5\uff0c\u5e76\u8c03\u7528 StringUtils \u7684 reverse \u65b9\u6cd5\n    public static boolean ping(String ip) {\n        System.out.println(\"Pinging: \" + ip);\n        String reversedIp = StringUtils.reverse(ip);  // \u8de8\u6587\u4ef6\u8c03\u7528\n        System.out.println(\"Reversed IP: \" + reversedIp);\n        return true;  // \u8fd9\u91cc\u7b80\u5316\u903b\u8f91\uff0c\u5047\u8bbe ping \u603b\u662f\u6210\u529f\n    }\n}\n"}}, "id": 12}
+2024-10-29 16:31:11,901 - DEBUG - Sending Request (ID: 13):
+Content-Length: 278
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 0, "character": 8}}, "id": 13}
+2024-10-29 16:31:11,960 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:11 PM Reconciled 1. Took 0 ms"
+  }
+}
+2024-10-29 16:31:11,960 - INFO - Log Message from Server: Oct 29, 2024, 4:31:11 PM Reconciled 1. Took 0 ms
+2024-10-29 16:31:12,004 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 13,
+  "result": []
+}
+2024-10-29 16:31:12,004 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 13, 'result': []}
+Processing AST Nodes:  21%|██        | 64/312 [00:00<00:01, 124.62node/s]2024-10-29 16:31:12,004 - DEBUG - Sending Request (ID: 14):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 0, "character": 24}}, "id": 14}
+2024-10-29 16:31:12,008 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 14,
+  "result": []
+}
+2024-10-29 16:31:12,008 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 14, 'result': []}
+2024-10-29 16:31:12,008 - DEBUG - Sending Request (ID: 15):
+Content-Length: 278
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 2, "character": 7}}, "id": 15}
+2024-10-29 16:31:12,030 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 15,
+  "result": []
+}
+2024-10-29 16:31:12,030 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 15, 'result': []}
+2024-10-29 16:31:12,030 - DEBUG - Sending Request (ID: 16):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 2, "character": 23}}, "id": 16}
+2024-10-29 16:31:12,042 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 16,
+  "result": []
+}
+2024-10-29 16:31:12,042 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 16, 'result': []}
+2024-10-29 16:31:12,043 - DEBUG - Sending Request (ID: 17):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 2, "character": 29}}, "id": 17}
+2024-10-29 16:31:12,050 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 17,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java",
+      "range": {
+        "start": {
+          "line": 2,
+          "character": 13
+        },
+        "end": {
+          "line": 2,
+          "character": 24
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,051 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 17, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java', 'range': {'start': {'line': 2, 'character': 13}, 'end': {'line': 2, 'character': 24}}}]}
+2024-10-29 16:31:12,051 - DEBUG - Sending Request (ID: 18):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 4, "character": 13}}, "id": 18}
+2024-10-29 16:31:12,055 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 18,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java",
+      "range": {
+        "start": {
+          "line": 4,
+          "character": 13
+        },
+        "end": {
+          "line": 4,
+          "character": 25
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,055 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 18, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java', 'range': {'start': {'line': 4, 'character': 13}, 'end': {'line': 4, 'character': 25}}}]}
+2024-10-29 16:31:12,055 - DEBUG - Sending Request (ID: 19):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 6, "character": 26}}, "id": 19}
+2024-10-29 16:31:12,058 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 19,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java",
+      "range": {
+        "start": {
+          "line": 6,
+          "character": 26
+        },
+        "end": {
+          "line": 6,
+          "character": 30
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,058 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 19, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java', 'range': {'start': {'line': 6, 'character': 26}, 'end': {'line': 6, 'character': 30}}}]}
+2024-10-29 16:31:12,058 - DEBUG - Sending Request (ID: 20):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 6, "character": 38}}, "id": 20}
+2024-10-29 16:31:12,066 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 20,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java",
+      "range": {
+        "start": {
+          "line": 6,
+          "character": 38
+        },
+        "end": {
+          "line": 6,
+          "character": 40
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,066 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 20, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java', 'range': {'start': {'line': 6, 'character': 38}, 'end': {'line': 6, 'character': 40}}}]}
+2024-10-29 16:31:12,066 - DEBUG - Sending Request (ID: 21):
+Content-Length: 278
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 7, "character": 8}}, "id": 21}
+2024-10-29 16:31:12,071 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 21,
+  "result": []
+}
+2024-10-29 16:31:12,072 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 21, 'result': []}
+2024-10-29 16:31:12,072 - DEBUG - Sending Request (ID: 22):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 7, "character": 15}}, "id": 22}
+2024-10-29 16:31:12,077 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 22,
+  "result": []
+}
+2024-10-29 16:31:12,077 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 22, 'result': []}
+2024-10-29 16:31:12,077 - DEBUG - Sending Request (ID: 23):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 7, "character": 19}}, "id": 23}
+2024-10-29 16:31:12,083 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 23,
+  "result": []
+}
+2024-10-29 16:31:12,083 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 23, 'result': []}
+2024-10-29 16:31:12,083 - DEBUG - Sending Request (ID: 24):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 7, "character": 41}}, "id": 24}
+2024-10-29 16:31:12,089 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 24,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java",
+      "range": {
+        "start": {
+          "line": 6,
+          "character": 38
+        },
+        "end": {
+          "line": 6,
+          "character": 40
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,089 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 24, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java', 'range': {'start': {'line': 6, 'character': 38}, 'end': {'line': 6, 'character': 40}}}]}
+2024-10-29 16:31:12,089 - DEBUG - Sending Request (ID: 25):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 8, "character": 15}}, "id": 25}
+2024-10-29 16:31:12,095 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 25,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java",
+      "range": {
+        "start": {
+          "line": 8,
+          "character": 15
+        },
+        "end": {
+          "line": 8,
+          "character": 25
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,095 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 25, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java', 'range': {'start': {'line': 8, 'character': 15}, 'end': {'line': 8, 'character': 25}}}]}
+2024-10-29 16:31:12,095 - DEBUG - Sending Request (ID: 26):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 8, "character": 28}}, "id": 26}
+2024-10-29 16:31:12,100 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 26,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java",
+      "range": {
+        "start": {
+          "line": 2,
+          "character": 13
+        },
+        "end": {
+          "line": 2,
+          "character": 24
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,100 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 26, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java', 'range': {'start': {'line': 2, 'character': 13}, 'end': {'line': 2, 'character': 24}}}]}
+2024-10-29 16:31:12,100 - DEBUG - Sending Request (ID: 27):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 8, "character": 40}}, "id": 27}
+2024-10-29 16:31:12,106 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 27,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java",
+      "range": {
+        "start": {
+          "line": 4,
+          "character": 25
+        },
+        "end": {
+          "line": 4,
+          "character": 32
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,107 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 27, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/StringUtils.java', 'range': {'start': {'line': 4, 'character': 25}, 'end': {'line': 4, 'character': 32}}}]}
+Processing AST Nodes:  41%|████      | 128/312 [00:00<00:00, 239.22node/s]2024-10-29 16:31:12,107 - DEBUG - Sending Request (ID: 28):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 8, "character": 48}}, "id": 28}
+2024-10-29 16:31:12,111 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 28,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java",
+      "range": {
+        "start": {
+          "line": 6,
+          "character": 38
+        },
+        "end": {
+          "line": 6,
+          "character": 40
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,112 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 28, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java', 'range': {'start': {'line': 6, 'character': 38}, 'end': {'line': 6, 'character': 40}}}]}
+2024-10-29 16:31:12,112 - DEBUG - Sending Request (ID: 29):
+Content-Length: 278
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 9, "character": 8}}, "id": 29}
+2024-10-29 16:31:12,117 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 29,
+  "result": []
+}
+2024-10-29 16:31:12,117 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 29, 'result': []}
+2024-10-29 16:31:12,117 - DEBUG - Sending Request (ID: 30):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 9, "character": 15}}, "id": 30}
+2024-10-29 16:31:12,123 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 30,
+  "result": []
+}
+2024-10-29 16:31:12,124 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 30, 'result': []}
+2024-10-29 16:31:12,124 - DEBUG - Sending Request (ID: 31):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 9, "character": 19}}, "id": 31}
+2024-10-29 16:31:12,128 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 31,
+  "result": []
+}
+2024-10-29 16:31:12,128 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 31, 'result': []}
+2024-10-29 16:31:12,128 - DEBUG - Sending Request (ID: 32):
+Content-Length: 279
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java"}, "position": {"line": 9, "character": 45}}, "id": 32}
+2024-10-29 16:31:12,131 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 32,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java",
+      "range": {
+        "start": {
+          "line": 8,
+          "character": 15
+        },
+        "end": {
+          "line": 8,
+          "character": 25
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,132 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 32, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java', 'range': {'start': {'line': 8, 'character': 15}, 'end': {'line': 8, 'character': 25}}}]}
+2024-10-29 16:31:12,132 - DEBUG - Sending Request (ID: 33):
+Content-Length: 924
+
+{"jsonrpc": "2.0", "method": "textDocument/didOpen", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java", "languageId": "java", "version": 1, "text": "package Java.example_project.src;\n\nimport Java.example_project.src.utils.StringUtils;\nimport Java.example_project.src.utils.NetworkUtils;\n\npublic class Main {\n    public static void main(String[] args) {\n        // \u8c03\u7528\u8de8\u6587\u4ef6\u7684 StringUtils \u7684\u9759\u6001\u65b9\u6cd5\n        String input = \"Hello, World!\";\n        String reversed = StringUtils.reverse(input);\n        System.out.println(\"Reversed: \" + reversed);\n\n        // \u8c03\u7528 NetworkUtils \u4e2d\u7684\u65b9\u6cd5\n        boolean reachable = NetworkUtils.ping(\"127.0.0.1\");\n        System.out.println(\"Is reachable: \" + reachable);\n    }\n}\n"}}, "id": 33}
+2024-10-29 16:31:12,132 - DEBUG - Sending Request (ID: 34):
+Content-Length: 264
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 0, "character": 8}}, "id": 34}
+2024-10-29 16:31:12,188 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "method": "window/logMessage",
+  "params": {
+    "type": 3,
+    "message": "Oct 29, 2024, 4:31:12 PM Reconciled 1. Took 0 ms"
+  }
+}
+2024-10-29 16:31:12,188 - INFO - Log Message from Server: Oct 29, 2024, 4:31:12 PM Reconciled 1. Took 0 ms
+2024-10-29 16:31:12,232 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 34,
+  "result": []
+}
+2024-10-29 16:31:12,232 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 34, 'result': []}
+2024-10-29 16:31:12,232 - DEBUG - Sending Request (ID: 35):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 0, "character": 13}}, "id": 35}
+2024-10-29 16:31:12,234 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 35,
+  "result": []
+}
+2024-10-29 16:31:12,234 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 35, 'result': []}
+2024-10-29 16:31:12,234 - DEBUG - Sending Request (ID: 36):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 0, "character": 29}}, "id": 36}
+2024-10-29 16:31:12,236 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 36,
+  "result": []
+}
+2024-10-29 16:31:12,236 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 36, 'result': []}
+Processing AST Nodes:  55%|█████▍    | 171/312 [00:00<00:00, 266.31node/s]2024-10-29 16:31:12,236 - DEBUG - Sending Request (ID: 37):
+Content-Length: 264
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 2, "character": 7}}, "id": 37}
+2024-10-29 16:31:12,252 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 37,
+  "result": []
+}
+2024-10-29 16:31:12,252 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 37, 'result': []}
+2024-10-29 16:31:12,252 - DEBUG - Sending Request (ID: 38):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 2, "character": 12}}, "id": 38}
+2024-10-29 16:31:12,261 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 38,
+  "result": []
+}
+2024-10-29 16:31:12,261 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 38, 'result': []}
+2024-10-29 16:31:12,261 - DEBUG - Sending Request (ID: 39):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 2, "character": 28}}, "id": 39}
+2024-10-29 16:31:12,270 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 39,
+  "result": []
+}
+2024-10-29 16:31:12,271 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 39, 'result': []}
+2024-10-29 16:31:12,271 - DEBUG - Sending Request (ID: 40):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 2, "character": 32}}, "id": 40}
+2024-10-29 16:31:12,282 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 40,
+  "result": []
+}
+2024-10-29 16:31:12,282 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 40, 'result': []}
+2024-10-29 16:31:12,282 - DEBUG - Sending Request (ID: 41):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 2, "character": 38}}, "id": 41}
+2024-10-29 16:31:12,301 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 41,
+  "result": []
+}
+2024-10-29 16:31:12,301 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 41, 'result': []}
+2024-10-29 16:31:12,301 - DEBUG - Sending Request (ID: 42):
+Content-Length: 264
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 3, "character": 7}}, "id": 42}
+2024-10-29 16:31:12,314 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 42,
+  "result": []
+}
+2024-10-29 16:31:12,314 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 42, 'result': []}
+2024-10-29 16:31:12,314 - DEBUG - Sending Request (ID: 43):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 3, "character": 12}}, "id": 43}
+2024-10-29 16:31:12,323 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 43,
+  "result": []
+}
+2024-10-29 16:31:12,323 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 43, 'result': []}
+2024-10-29 16:31:12,323 - DEBUG - Sending Request (ID: 44):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 3, "character": 28}}, "id": 44}
+2024-10-29 16:31:12,332 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 44,
+  "result": []
+}
+2024-10-29 16:31:12,332 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 44, 'result': []}
+2024-10-29 16:31:12,332 - DEBUG - Sending Request (ID: 45):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 3, "character": 32}}, "id": 45}
+2024-10-29 16:31:12,342 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 45,
+  "result": []
+}
+2024-10-29 16:31:12,342 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 45, 'result': []}
+2024-10-29 16:31:12,342 - DEBUG - Sending Request (ID: 46):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 3, "character": 38}}, "id": 46}
+2024-10-29 16:31:12,351 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 46,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java",
+      "range": {
+        "start": {
+          "line": 4,
+          "character": 13
+        },
+        "end": {
+          "line": 4,
+          "character": 25
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,351 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 46, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java', 'range': {'start': {'line': 4, 'character': 13}, 'end': {'line': 4, 'character': 25}}}]}
+2024-10-29 16:31:12,352 - DEBUG - Sending Request (ID: 47):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 5, "character": 13}}, "id": 47}
+2024-10-29 16:31:12,354 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 47,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java",
+      "range": {
+        "start": {
+          "line": 5,
+          "character": 13
+        },
+        "end": {
+          "line": 5,
+          "character": 17
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,354 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 47, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java', 'range': {'start': {'line': 5, 'character': 13}, 'end': {'line': 5, 'character': 17}}}]}
+Processing AST Nodes:  67%|██████▋   | 210/312 [00:00<00:00, 284.20node/s]2024-10-29 16:31:12,354 - DEBUG - Sending Request (ID: 48):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 6, "character": 23}}, "id": 48}
+2024-10-29 16:31:12,356 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 48,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java",
+      "range": {
+        "start": {
+          "line": 6,
+          "character": 23
+        },
+        "end": {
+          "line": 6,
+          "character": 27
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,356 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 48, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java', 'range': {'start': {'line': 6, 'character': 23}, 'end': {'line': 6, 'character': 27}}}]}
+2024-10-29 16:31:12,356 - DEBUG - Sending Request (ID: 49):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 6, "character": 37}}, "id": 49}
+2024-10-29 16:31:12,360 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 49,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java",
+      "range": {
+        "start": {
+          "line": 6,
+          "character": 37
+        },
+        "end": {
+          "line": 6,
+          "character": 41
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,360 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 49, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java', 'range': {'start': {'line': 6, 'character': 37}, 'end': {'line': 6, 'character': 41}}}]}
+2024-10-29 16:31:12,360 - DEBUG - Sending Request (ID: 50):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 8, "character": 15}}, "id": 50}
+2024-10-29 16:31:12,364 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 50,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java",
+      "range": {
+        "start": {
+          "line": 8,
+          "character": 15
+        },
+        "end": {
+          "line": 8,
+          "character": 20
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,364 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 50, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java', 'range': {'start': {'line': 8, 'character': 15}, 'end': {'line': 8, 'character': 20}}}]}
+2024-10-29 16:31:12,364 - DEBUG - Sending Request (ID: 51):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 9, "character": 15}}, "id": 51}
+2024-10-29 16:31:12,368 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 51,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java",
+      "range": {
+        "start": {
+          "line": 9,
+          "character": 15
+        },
+        "end": {
+          "line": 9,
+          "character": 23
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,368 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 51, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java', 'range': {'start': {'line': 9, 'character': 15}, 'end': {'line': 9, 'character': 23}}}]}
+2024-10-29 16:31:12,368 - DEBUG - Sending Request (ID: 52):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 9, "character": 26}}, "id": 52}
+2024-10-29 16:31:12,376 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 52,
+  "result": []
+}
+2024-10-29 16:31:12,376 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 52, 'result': []}
+2024-10-29 16:31:12,376 - DEBUG - Sending Request (ID: 53):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 9, "character": 38}}, "id": 53}
+2024-10-29 16:31:12,388 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 53,
+  "result": []
+}
+2024-10-29 16:31:12,388 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 53, 'result': []}
+2024-10-29 16:31:12,388 - DEBUG - Sending Request (ID: 54):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 9, "character": 46}}, "id": 54}
+2024-10-29 16:31:12,392 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 54,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java",
+      "range": {
+        "start": {
+          "line": 8,
+          "character": 15
+        },
+        "end": {
+          "line": 8,
+          "character": 20
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,392 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 54, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java', 'range': {'start': {'line': 8, 'character': 15}, 'end': {'line': 8, 'character': 20}}}]}
+2024-10-29 16:31:12,392 - DEBUG - Sending Request (ID: 55):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 10, "character": 8}}, "id": 55}
+2024-10-29 16:31:12,396 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 55,
+  "result": []
+}
+2024-10-29 16:31:12,396 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 55, 'result': []}
+2024-10-29 16:31:12,396 - DEBUG - Sending Request (ID: 56):
+Content-Length: 266
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 10, "character": 15}}, "id": 56}
+2024-10-29 16:31:12,402 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 56,
+  "result": []
+}
+2024-10-29 16:31:12,402 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 56, 'result': []}
+2024-10-29 16:31:12,402 - DEBUG - Sending Request (ID: 57):
+Content-Length: 266
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 10, "character": 19}}, "id": 57}
+2024-10-29 16:31:12,408 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 57,
+  "result": []
+}
+2024-10-29 16:31:12,408 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 57, 'result': []}
+2024-10-29 16:31:12,408 - DEBUG - Sending Request (ID: 58):
+Content-Length: 266
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 10, "character": 42}}, "id": 58}
+2024-10-29 16:31:12,413 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 58,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java",
+      "range": {
+        "start": {
+          "line": 9,
+          "character": 15
+        },
+        "end": {
+          "line": 9,
+          "character": 23
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,413 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 58, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java', 'range': {'start': {'line': 9, 'character': 15}, 'end': {'line': 9, 'character': 23}}}]}
+2024-10-29 16:31:12,413 - DEBUG - Sending Request (ID: 59):
+Content-Length: 266
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 13, "character": 16}}, "id": 59}
+2024-10-29 16:31:12,417 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 59,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java",
+      "range": {
+        "start": {
+          "line": 13,
+          "character": 16
+        },
+        "end": {
+          "line": 13,
+          "character": 25
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,417 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 59, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java', 'range': {'start': {'line': 13, 'character': 16}, 'end': {'line': 13, 'character': 25}}}]}
+2024-10-29 16:31:12,417 - DEBUG - Sending Request (ID: 60):
+Content-Length: 266
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 13, "character": 28}}, "id": 60}
+2024-10-29 16:31:12,472 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 60,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java",
+      "range": {
+        "start": {
+          "line": 4,
+          "character": 13
+        },
+        "end": {
+          "line": 4,
+          "character": 25
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,472 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 60, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/utils/NetworkUtils.java', 'range': {'start': {'line': 4, 'character': 13}, 'end': {'line': 4, 'character': 25}}}]}
+Processing AST Nodes:  90%|█████████ | 281/312 [00:01<00:00, 374.05node/s]2024-10-29 16:31:12,472 - DEBUG - Sending Request (ID: 61):
+Content-Length: 266
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 13, "character": 41}}, "id": 61}
+2024-10-29 16:31:12,482 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 61,
+  "result": []
+}
+2024-10-29 16:31:12,482 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 61, 'result': []}
+2024-10-29 16:31:12,482 - DEBUG - Sending Request (ID: 62):
+Content-Length: 265
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 14, "character": 8}}, "id": 62}
+2024-10-29 16:31:12,485 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 62,
+  "result": []
+}
+2024-10-29 16:31:12,485 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 62, 'result': []}
+2024-10-29 16:31:12,485 - DEBUG - Sending Request (ID: 63):
+Content-Length: 266
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 14, "character": 15}}, "id": 63}
+2024-10-29 16:31:12,488 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 63,
+  "result": []
+}
+2024-10-29 16:31:12,488 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 63, 'result': []}
+2024-10-29 16:31:12,488 - DEBUG - Sending Request (ID: 64):
+Content-Length: 266
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 14, "character": 19}}, "id": 64}
+2024-10-29 16:31:12,491 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 64,
+  "result": []
+}
+2024-10-29 16:31:12,491 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 64, 'result': []}
+2024-10-29 16:31:12,491 - DEBUG - Sending Request (ID: 65):
+Content-Length: 266
+
+{"jsonrpc": "2.0", "method": "textDocument/definition", "params": {"textDocument": {"uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java"}, "position": {"line": 14, "character": 46}}, "id": 65}
+2024-10-29 16:31:12,493 - DEBUG - Received Message:
+{
+  "jsonrpc": "2.0",
+  "id": 65,
+  "result": [
+    {
+      "uri": "file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java",
+      "range": {
+        "start": {
+          "line": 13,
+          "character": 16
+        },
+        "end": {
+          "line": 13,
+          "character": 25
+        }
+      }
+    }
+  ]
+}
+2024-10-29 16:31:12,494 - DEBUG - Definition request response: {'jsonrpc': '2.0', 'id': 65, 'result': [{'uri': 'file:///home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/examples/Java/example_project/src/Main.java', 'range': {'start': {'line': 13, 'character': 16}, 'end': {'line': 13, 'character': 25}}}]}
+Processing AST Nodes: 100%|██████████| 312/312 [00:01<00:00, 274.73node/s]
+2024-10-29 16:31:12,497 - DEBUG - Definition graph saved to /home/sxj/Desktop/Workspace/Development/RepoRepresentation/RepoRep/src/output/example_project/definitiongraph.json
